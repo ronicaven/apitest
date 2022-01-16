@@ -1,1 +1,2 @@
 https://apipheny.io/free-api/
+https://www.kloia.com/blog/step-1-introduction-to-karate-project-setup-hello-world
