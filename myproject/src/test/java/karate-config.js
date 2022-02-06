@@ -6,7 +6,8 @@ function fn() {
   }
   var config = {
     env: env,
-    myVarName: 'someValue'
+    myVarName: 'hello karate',
+    baseUrl: 'https://www.kloia.com/'
   }
   if (env == 'dev') {
     // customize
@@ -15,4 +16,4 @@ function fn() {
     // customize
   }
   return config;
-}
+ }
