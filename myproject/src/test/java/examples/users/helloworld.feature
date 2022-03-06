@@ -23,13 +23,25 @@ Scenario: defining JSON object and print it
         ]
       """
     * print jsonObject[0].name, jsonObject[1].phone
-
-Scenario: using karate-config
-    * print baseUrl
-    * print myVarName
-
-Scenario: Get request
-    Given url 'https://www.kloia.com/'
-    And path 'blog'
+ 
+  Scenario: Get request
+   Given url 'https://crudcrud.com/api/9a3f0d3abe5349239af4bd91373fc7ca/unicorns'
     When method GET
-    Then status 400
+   Then status 200
+
+  Scenario: Post request
+    * def user =
+    """
+    {
+      "name": "Jane",
+      "age": 21,
+      "colour": "Black"
+      }
+    }
+    """
+    Given url 'https://crudcrud.com/api/9a3f0d3abe5349239af4bd91373fc7ca/'
+    And path 'unicorns'
+    And request user
+    When method POST
+    Then status 201
+
